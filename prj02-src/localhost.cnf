@@ -23,7 +23,7 @@ organizationName            = Organization Name (eg, company)
 organizationName_default    = IIT
 
 commonName           = Common Name (e.g. server FQDN or YOUR name)
-commonName_default   = ece443.localhost
+commonName_default   = ece443.hacked
 
 emailAddress         = Email Address
 emailAddress_default =
@@ -40,4 +40,4 @@ nsComment            = "OpenSSL Generated Certificate"
 ####################################################################
 [ alternate_names ]
 
-DNS.1  = localhost
+DNS.1  = ece443.hacked
