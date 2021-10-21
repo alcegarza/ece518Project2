@@ -1,27 +1,30 @@
-# ece518Project2
+# ECE 443/518 Fall 2021 - Project 2
+## Secure a Website with HTTPS
 
-# # ECE 443/518 Fall 2021 - Project 2
-Secure a Website with HTTPS
-
-Report Due: 11/07 (Sun.), by the end of the day (Chicago time)
-Late submissions will NOT be graded
-I. Objective
+### I. Objective
 In this project, you will learn to secure a website with HTTPS connections and craft an attack to study their vulnerabilities.
 
 As such an attack may open doors for more serious attacks, you should complete the attack within our virtual machine and never try it directly on your own and other people's computers.
 
-II. The Apache Web Server
+### II. The Apache Web Server
 If you haven't complete the VM setup, please do it now. Start the virtual machine and then login using username 'ubuntu' and password 'ubuntu', preferably using PuTTY.
 
 Our virtual machine comes with the Apache web server installed already with an example website. To verify so, first use 'netstat' to see what network ports are currently in use.
 
-ubuntu@ece443:~$ netstat -tan
-Active Internet connections (servers and established)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
-tcp        0      0 10.0.2.15:22            10.0.2.2:52691          ESTABLISHED
-tcp6       0      0 :::80                   :::*                    LISTEN
-tcp6       0      0 :::22                   :::*                    LISTEN
+*ubuntu@ece443:~$ netstat -tan*
+
+*Active Internet connections (servers and established)*
+
+*Proto Recv-Q Send-Q Local Address           Foreign Address         State*
+
+*tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN*
+
+*tcp        0      0 10.0.2.15:22            10.0.2.2:52691          ESTABLISHED*
+
+*tcp6       0      0 :::80                   :::*                    LISTEN*
+
+*tcp6       0      0 :::22                   :::*                    LISTEN*
+
 The line starting with 'tcp6 0 0 :::80' indicates that the port 80 is currently in use, in our case by Apache.
 Then, use 'wget' to obtain the homepage of the example website located at 'localhost', which confirms that Apache works properly.
 
